@@ -16,7 +16,8 @@ class MainActivity : AppCompatActivity() {
 
     private fun rollDice() {
         //Toast.makeText(this, "ai apasat", Toast.LENGTH_SHORT).show()
+        val randomInt = (1..6).random()
         val resultText: TextView = findViewById(R.id.result_text)
-        resultText.text = "woo"
+        resultText.text = randomInt.toString()
     }
 }
