@@ -13,7 +13,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val slider: Slider = findViewById(R.id.slider)
-        slider.addOnChangeListener { cslider, value, fromUser -> changeDie(slider, value, fromUser)  }
+        slider.addOnChangeListener { _, value, _ -> changeDie(value)  }
 
         val rollButton: Button = findViewById(R.id.roll_Button)
         rollButton.setOnClickListener { rollDice(slider.value.toInt()) }
@@ -26,7 +26,7 @@ class MainActivity : AppCompatActivity() {
         resultText.text = randomInt.toString()
     }
 
-    private fun changeDie(slider: Slider, value: Float, fromUser: Boolean) {
+    private fun changeDie(value: Float) {
         val diceSize: TextView = findViewById(R.id.dice_size)
         diceSize.setText("Rolling a ${value.toInt()} sided die")
     }
