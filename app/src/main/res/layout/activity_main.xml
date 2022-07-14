@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_gravity="center_vertical"
     android:orientation="vertical"
     tools:context=".MainActivity">
@@ -15,7 +15,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:textSize="30sp"
-        android:text="Hello World!" />
+        android:text="" />
 
     <Button
         android:id="@+id/roll_Button"
@@ -24,4 +24,23 @@
         android:layout_gravity="center_horizontal"
         android:text="@string/roll_it_label"
         android:backgroundTint="@color/orange"/>
+
+    <com.google.android.material.slider.Slider
+        android:id="@+id/slider"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:valueFrom="4.0"
+        android:valueTo="20.0"
+        android:stepSize="1.0"
+        android:value="6.0"
+        app:labelBehavior="gone"/>
+
+    <TextView
+        android:id="@+id/dice_size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/rolling_a_6_sided_die"
+        />
 </LinearLayout>
